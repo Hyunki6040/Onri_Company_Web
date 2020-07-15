@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- JAVA와 연결할 Mapper 파일 설정 -->
+<mapper namespace="poly.persistance.mapper.MainMapper">
+   <!-- insert, update, delete, select -->
+   <insert id="insertApplicant" parameterType="ApplicantDTO">
+   INSERT INTO
+   applicant(
+   	APPLI_NO,
+   	APPLI_DEPART,
+   	APPLI_NAME,
+   	APPLI_BIRTH,
+   	APPLI_PHONE,
+   	APPLI_MAIL,
+   	APPLI_DATE,
+   	APPLI_RESUME,
+   	APPLI_PORTFOLIO
+   )
+   VALUES(
+   	get_seq('applicant'),
+   	#{appli_depart},
+   	#{appli_name},
+   	#{appli_birth},
+   	#{appli_phone},
+   	#{appli_mail},
+   	now(),
+   	#{appli_resume},
+   	#{appli_portfolio}
+   )
+   
+   </insert>
+</mapper>
