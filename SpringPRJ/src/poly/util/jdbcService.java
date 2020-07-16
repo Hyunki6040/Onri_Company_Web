@@ -32,7 +32,7 @@ public class jdbcService {
             // 드라이버 매니저에게 Connection 객체를 달라고 요청한다.
             // Connection을 얻기 위해 필요한 url 역시, 벤더사마다 다르다.
             // mysql은 "jdbc:mysql://localhost/사용할db이름" 이다.
-            String url = "jdbc:mysql://59.10.213.40:3306/Onrikorea?characterEncoding=utf8&amp;useSSL=false&amp;autoReconnection=true";
+            String url = "jdbc:mysql://localhost:3306/Onrikorea?characterEncoding=utf8&amp;useSSL=false&amp;autoReconnection=true";
 
             // @param  getConnection(url, userName, password);
             // @return Connection
